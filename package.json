@@ -4,6 +4,6 @@
   "main": "app.js",
   "license": "MIT",
   "bin": {
-    "cri": "./bin/cri",
+    "cri": "./bin/cri"
   }
 }
