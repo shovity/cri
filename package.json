@@ -1,0 +1,9 @@
+{
+  "name": "cri",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "bin": {
+    "cri": "./bin/cri",
+  }
+}

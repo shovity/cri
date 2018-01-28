@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const app = require('../app');
+
+const argv = process.argv.slice(2);
+const cwd =  process.cwd();
+
+// validate
+if (!argv[0]) {
+    console.log('Input is required');
+    process.exit(9);
+}
+
+// get params
+const inputUri = path.join(cwd, argv[0]);
+const outputUri = (argv.indexOf('-o') !== -1)? path.join(cwd, argv[argv.indexOf('-o') + 1]) : undefined;
+const password = (argv.indexOf('-p') !== -1)? argv[argv.indexOf('-p') + 1] : undefined;
+
+app({
+    inputUri,
+    outputUri,
+    password
+})
