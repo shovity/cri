@@ -1,8 +1,18 @@
 {
   "name": "cri",
-  "version": "1.1.3",
+  "version": "1.1.5",
+  "description": "Encrypt and decrypt file",
+  "author": "Huong Nguyen <shovity@gmail.com>",
+  "repository": "https://github.com/shovity/cri",
+  "keywords": [
+    "encrypt",
+    "decrypt",
+    "encode",
+    "decode"
+  ],
   "main": "app.js",
   "license": "MIT",
+
   "bin": {
     "cri": "./bin/cri"
   }

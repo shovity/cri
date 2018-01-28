@@ -1,5 +1,10 @@
+'use strict';
+
 module.exports = 
-`cri [filename] [-p password] [-o output]
-OPTIONS:  -p : password
-          -o : file output
-          -r : replace old file`
+`Usage: cri [filename] [-p password] [-o output] [-r]
+Options:
+  -p      password
+  -o      file output
+  -r      replace old file
+
+Version: 1.1.5`;
