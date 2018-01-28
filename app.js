@@ -2,7 +2,7 @@
 
 const path = require('path');
 const cipher = require('./lib/cipher');
-const docs = require('./docs');
+
 
 
 module.exports = (params) => {
@@ -14,10 +14,6 @@ module.exports = (params) => {
         : `${params.outputUri || inputUri}.cri`;
 
     const password = params.password || 'tluafed-terces';
-
-    if (!inputUri) {
-        return console.log(`cri {filename} [-p password] [-o output]`);
-    }
 
     cipher({ inputUri, outputUri, password, decipherMode }, (err) => {
         if (err) {
