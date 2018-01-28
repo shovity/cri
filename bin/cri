@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+'use strict';
+
 const path = require('path');
 const app = require('../app');
 const docs = require('../docs');
@@ -16,9 +18,6 @@ if (!argv[0]) {
 const inputUri = path.join(cwd, argv[0]);
 const outputUri = (argv.indexOf('-o') !== -1) ? path.join(cwd, argv[argv.indexOf('-o') + 1]) : undefined;
 const password = (argv.indexOf('-p') !== -1) ? argv[argv.indexOf('-p') + 1] : undefined;
+const replace = argv.indexOf('-r') !== -1;
 
-app({
-    inputUri,
-    outputUri,
-    password
-})
+app({inputUri, outputUri, password, replace });
