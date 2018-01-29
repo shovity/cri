@@ -6,5 +6,4 @@ Options:
   -p      password
   -o      file output
   -r      replace old file
-
-Version: 1.1.5`;
+  -v      version`;
