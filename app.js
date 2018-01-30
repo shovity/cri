@@ -7,6 +7,8 @@ const cipher = require('./lib/cipher');
 module.exports = (params) => {
 
     const inputUri = params.inputUri;
+
+    // detect decipherMode
     const decipherMode = inputUri.split('.').slice(-1)[0] === 'cri';
 
     const outputUri = decipherMode
@@ -14,6 +16,10 @@ module.exports = (params) => {
         : `${params.outputUri || inputUri}.cri`;
 
     const password = params.password || 'tluafed-terces';
+
+    if (!params.password) {
+        console.log('Lost password params, default password is used')
+    }
 
     cipher({ inputUri, outputUri, password, decipherMode }, (err) => {
         if (err) {
